@@ -15,13 +15,13 @@
     <div>
     <h1>User Registration</h1>
     <form class="mb-3" action="#" method="post" th:action="@{/person/save}" th:object="${person}" >
-        <label class="form-label" for="id" >Id:</label>
+        <label class="form-label" for="id" th:text="#{person.id}">Id:</label>
         <input class="form-control" id="id" th:field="*{id}" type="text"/><br/>
 
-        <label class="form-label" for="username">Full name:</label>
+        <label class="form-label" for="username" th:text="#{person.username}">Full name:</label>
         <input class="form-control" id="username" th:field="*{username}" type="text"/><br/>
 
-        <label class="form-label" for="email">E-mail:</label>
+        <label class="form-label" for="email" th:text="#{person.email}">E-mail:</label>
         <input class="form-control" id="email" th:field="*{email}" type="text"/><br/>
 
         <button class="btn btn-primary" type="submit">Register</button>

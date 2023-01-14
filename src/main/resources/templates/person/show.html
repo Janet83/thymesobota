@@ -15,13 +15,13 @@
 szczegóły użytkownika;
 
 <p>
-    Id: <span th:text="${person.id}"></span>
+    <label th:text="#{person.id}">Id</label>: <span th:text="${person.id}"></span>
 </p>
 <p>
-    Username: <span th:text="${person.username}"></span><br/>
-    Email: <span th:text="${person.email}"></span><br/>
-    Enabled: <span th:text="${person.enabled}"></span><br/>
-    Role: <span th:text="${person.role}"></span><br/>
+    <label th:text="#{person.username}">Username</label>: <span th:text="${person.username}"></span><br/>
+    <label th:text="#{person.email}">Email</label>: <span th:text="${person.email}"></span><br/>
+    <label th:text="#{person.enabled}">Enabled</label>: <span th:text="${person.enabled}"></span><br/>
+    <label th:text="#{person.role}">Role</label>: <span th:text="${person.role}"></span><br/>
 </p>
 </section>
 
