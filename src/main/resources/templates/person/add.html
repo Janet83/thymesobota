@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/mainLayout}">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -10,27 +11,23 @@
 </head>
 <body>
 
-<div th:replace="/fragments/header.html :: header"></div>
-
-<div class="container">
-<div>
+<section layout:fragment="custom-content">
+    <div>
     <h1>User Registration</h1>
-    <form action="#" method="post" th:action="@{/person/save}" th:object="${person}">
-        <label for="id">Id:</label>
-        <input id="id" th:field="*{id}" type="text"/><br/>
+    <form class="mb-3" action="#" method="post" th:action="@{/person/save}" th:object="${person}" >
+        <label class="form-label" for="id" >Id:</label>
+        <input class="form-control" id="id" th:field="*{id}" type="text"/><br/>
 
-        <label for="username">Full name:</label>
-        <input id="username" th:field="*{username}" type="text"/><br/>
+        <label class="form-label" for="username">Full name:</label>
+        <input class="form-control" id="username" th:field="*{username}" type="text"/><br/>
 
-        <label for="email">E-mail:</label>
-        <input id="email" th:field="*{email}" type="text"/><br/>
+        <label class="form-label" for="email">E-mail:</label>
+        <input class="form-control" id="email" th:field="*{email}" type="text"/><br/>
 
-        <button type="submit">Register</button>
+        <button class="btn btn-primary" type="submit">Register</button>
     </form>
 </div>
-</div>
-
-<div th:replace="/fragments/footer.html :: footer"></div>
+</section>
 
 </body>
 </html>

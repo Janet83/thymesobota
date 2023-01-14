@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/mainLayout}">
 <head>
     <meta charset="UTF-8">
     <title>Szczegóły użytkownika</title>
@@ -10,9 +11,7 @@
 </head>
 <body>
 
-<div th:replace="/fragments/header.html :: header"></div>
-
-<div class="container">
+<section layout:fragment="custom-content">
 szczegóły użytkownika;
 
 <p>
@@ -24,9 +23,7 @@ szczegóły użytkownika;
     Enabled: <span th:text="${person.enabled}"></span><br/>
     Role: <span th:text="${person.role}"></span><br/>
 </p>
-</div>
-
-<div th:replace="/fragments/footer.html :: footer"></div>
+</section>
 
 </body>
 </html>
